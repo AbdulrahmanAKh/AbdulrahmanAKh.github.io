@@ -1,11 +1,11 @@
-# ⚡ Abdulrahman Alkhatib — Portfolio
+# Abdulrahman Alkhatib — Portfolio
 
 > Personal portfolio showcasing my projects, certifications, and experience in Computer Science & AI.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Portfolio-00C7B7?style=for-the-badge&logo=firefox&logoColor=white)](https://abdulrahmanakh.github.io/Alkhatib-Portfolio/)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://abdulrahmanakh.github.io/Alkhatib-Portfolio/)
 
-🔗 **Live Link:** [https://abdulrahmanakh.github.io/Alkhatib-Portfolio/](https://abdulrahmanakh.github.io/Alkhatib-Portfolio/)
+🔗 **Live Link:** [https://abdulrahmanakh.github.io/Alkhatib-Portfolio/](https://abdulrahmanakh.github.io/)
 
 ---
 
