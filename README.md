@@ -9,7 +9,7 @@
 
 ---
 
-### 🛠️ Built With
+### Built With
 
 - **React 18** — Component-driven UI
 - **Vite** — Fast frontend tooling
@@ -18,7 +18,7 @@
 
 ---
 
-### 💻 Local Development
+### Local Development
 
 ```bash
 # Clone the repository
@@ -50,7 +50,7 @@ portfolio/
 │   │   ├── Cards.jsx             # ProjectCard, CertCard, and Thumb components
 │   │   └── Sidebar.jsx           # Compact sticky sidebar with contacts & actions
 │   ├── App.jsx                   # Main layout container & hash router
-│   ├── data.js                   # 🌟 Single source of truth for all content
+│   ├── data.js                   # Single source of truth for all content
 │   ├── index.css                 # Tailwind base styles, theme gradients & animations
 │   ├── main.jsx                  # React application entrypoint
 │   └── pages.jsx                 # Page views (About, Resume, Projects, Certs, Contact)
@@ -62,7 +62,7 @@ portfolio/
 
 ---
 
-### 📬 Connect
+### Connect
 
 - **LinkedIn:** [Abdulrahman Alkhatib](https://www.linkedin.com/in/abdulrahman-alkhatib/)
 - **GitHub:** [@abdulrahmanakh](https://github.com/abdulrahmanakh)
