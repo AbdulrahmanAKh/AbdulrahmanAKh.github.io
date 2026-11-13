@@ -84,34 +84,42 @@ function Timeline({ items }) {
 }
 
 export function Resume() {
+  const credentialItems = (group) => CERTS.filter((c) => c.resumeGroup === group).map((c) => ({ title: c.title, org: c.issuer, when: c.date, desc: c.desc }))
   return (<>
     <Title>Resume</Title>
-    <Lead>Experience in API integration, IT operations and applied AI, supported by technical training and hands-on projects.</Lead>
+    <Lead>Software development, API integration and applied AI, supported by university study and practical project work.</Lead>
     <a href={P.resume} download="Abdulrahman_Alkhatib_CV.pdf" className="mt-5 inline-flex rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-[#0d2326]">Download CV (PDF)</a>
-    <H2 icon={Briefcase}>Experience</H2><Timeline items={EXPERIENCE} />
-    <H2 icon={Star}>Leadership</H2><Timeline items={LEADERSHIP} />
     <H2 icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
-    <H2 icon={Code2}>Skills</H2>
+    <H2 icon={Code2}>Technical skills</H2>
     {Object.entries(SKILLS).map(([g, list]) => (
       <div key={g} className="mb-4"><small className="mb-2 block text-[13.5px] text-muted">{g}</small>
         <ul className="flex flex-wrap gap-2.5">{list.map((s) => <li key={s} className="list-none rounded-lg bg-chip px-4 py-[5px] text-sm">{s}</li>)}</ul></div>
     ))}
-    <H2 icon={FolderOpen}>Selected projects</H2>
+    <H2 icon={Briefcase}>Professional experience</H2><Timeline items={EXPERIENCE} />
+    <H2 icon={Star}>Leadership &amp; activities</H2><Timeline items={LEADERSHIP} />
+    <H2 icon={FolderOpen}>Projects</H2>
     <Grid>{PROJECTS.filter((p) => p.featured).map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
     <a href="#projects" className="mt-5 inline-block text-sm font-medium text-accent hover:underline">Explore all {PROJECTS.length} projects →</a>
+    <H2 icon={GraduationCap}>Certificates &amp; completed programs</H2>
+    <p className="mb-5 text-sm text-muted">Completion certificates earned through structured learning programs.</p>
+    <Timeline items={credentialItems('program')} />
+    <H2 icon={GraduationCap}>Online courses</H2><Timeline items={credentialItems('course')} />
+    <a href="#certificates" className="inline-block text-sm font-medium text-accent hover:underline">View all certificates and course completions →</a>
+    <H2 icon={Code2}>Languages</H2>
+    <p className="text-zinc-300">Arabic: Native · English: Professional working proficiency</p>
   </>)
 }
 
 export function Projects() {
-  const tags = ['All', ...new Set(PROJECTS.flatMap((p) => p.tags))]
+  const categories = ['All', 'Web Applications', 'AI & Computer Vision', 'Desktop Applications']
   const [cur, setCur] = useState('All')
-  const shown = PROJECTS.filter((p) => cur === 'All' || p.tags.includes(cur))
+  const shown = PROJECTS.filter((p) => cur === 'All' || p.category === cur)
   return (<>
     <Title>Projects</Title>
     <Lead>Software, AI and data projects from university, personal work and team contributions. Public showcases and private source repositories for the same project are grouped together.</Lead>
     <p className="mt-3 text-sm text-muted">{PROJECTS.length} projects · {PROJECTS.reduce((n, p) => n + p.repositories.length, 0)} repositories · {PROJECTS.filter((p) => p.demo).length} live websites and presentations</p>
-    <div role="group" aria-label="Filter projects by technology" className="mt-6 flex flex-wrap gap-2">
-      {tags.map((t) => (
+    <div role="group" aria-label="Filter projects by category" className="mt-6 flex flex-wrap gap-2">
+      {categories.map((t) => (
         <button key={t} type="button" aria-pressed={cur === t} onClick={() => setCur(t)}
           className="rounded-xl border border-line bg-chip px-4 py-[5px] text-[13.5px] font-medium aria-pressed:border-accent aria-pressed:bg-accent aria-pressed:text-[#0d2326]">{t}</button>
       ))}

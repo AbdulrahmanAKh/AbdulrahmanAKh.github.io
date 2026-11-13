@@ -80,3 +80,5 @@ Older KAUST editions and duplicate copies were omitted in favor of the latest co
 Use Node.js 22 or newer. Run `npm ci` and `npm run build` before publishing. GitHub Actions builds and deploys `dist/` to the root Pages URL.
 
 The About page features CRIS, Shakkel Commerce and SiteSight. The Resume page and downloadable CV contain the current confirmed education, experience, leadership and skills. The CV includes all 11 retained projects with portfolio and GitHub links. Zakat Zen, Mukafih and arXiv Hadoop were removed from the portfolio at the owner's request.
+
+Project navigation uses three purpose-based categories: Web Applications, AI & Computer Vision, and Desktop Applications. Technology badges remain on individual cards. The CV and Resume tab use distinct sections for professional experience, club leadership, certificates from completed programs, and online courses. DeepLearning.AI entries identify Coursera as the course platform.

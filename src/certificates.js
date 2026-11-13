@@ -7,7 +7,8 @@ export const CERTS = [
     "desc": "40 hours covering augmentation, transfer learning, segmentation and object detection.",
     "img": "/certificates/kaust-advanced-ai.jpg",
     "url": "/certificates/kaust-advanced-ai.pdf",
-    "m": "AI training · 40 hours"
+    "m": "Program certificate · 40 hours",
+    "resumeGroup": "program"
   },
   {
     "title": "Introduction to Artificial Intelligence · With Distinction",
@@ -16,16 +17,18 @@ export const CERTS = [
     "category": "AI & machine learning",
     "desc": "40 hours covering machine learning foundations, deep learning and unsupervised learning.",
     "img": "/certificates/kaust-intro-ai.jpg",
-    "url": "/certificates/kaust-intro-ai.pdf"
+    "url": "/certificates/kaust-intro-ai.pdf",
+    "resumeGroup": "program"
   },
   {
     "title": "McKinsey.org Forward Program",
     "issuer": "McKinsey.org",
     "date": "December 2025",
     "category": "Professional development",
-    "desc": "Online learning in problem solving, communication, adaptability and digital skills.",
+    "desc": "Completion certificate for a structured learning program in leadership, problem solving, communication and adaptability.",
     "img": "/certificates/mckinsey-forward.jpg",
-    "url": "/certificates/mckinsey-forward.pdf"
+    "url": "/certificates/mckinsey-forward.pdf",
+    "resumeGroup": "program"
   },
   {
     "title": "Practical Artificial Intelligence and Machine Learning for Professionals",
@@ -34,7 +37,8 @@ export const CERTS = [
     "category": "AI & machine learning",
     "desc": "Certificate of achievement in practical AI and machine learning.",
     "img": "/certificates/new-haven-ai.jpg",
-    "url": "/certificates/new-haven-ai.png"
+    "url": "/certificates/new-haven-ai.png",
+    "resumeGroup": "program"
   },
   {
     "title": "Supercharge Your Data Analytics with Generative AI",
@@ -53,7 +57,8 @@ export const CERTS = [
     "desc": "Course completion in neural network tuning and optimization.",
     "img": "/certificates/deep-neural-networks.jpg",
     "url": "/certificates/deep-neural-networks.pdf",
-    "verify": "https://coursera.org/verify/Y5A8ASIEVRHG"
+    "verify": "https://coursera.org/verify/Y5A8ASIEVRHG",
+    "resumeGroup": "course"
   },
   {
     "title": "Supervised Machine Learning: Regression",
@@ -93,7 +98,8 @@ export const CERTS = [
     "desc": "Three-course specialization: linear algebra, calculus, probability and statistics.",
     "img": "/certificates/mathematics-ml.jpg",
     "url": "/certificates/mathematics-ml.pdf",
-    "verify": "https://coursera.org/verify/specialization/EMEJHEQVPWG3"
+    "verify": "https://coursera.org/verify/specialization/EMEJHEQVPWG3",
+    "resumeGroup": "course"
   },
   {
     "title": "AWS Cloud Practitioner Essentials",
