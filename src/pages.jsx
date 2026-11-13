@@ -91,7 +91,6 @@ export function Resume() {
     <Title>Resume</Title>
     <Lead>Software development, API integration and applied AI, supported by university study and practical project work.</Lead>
     <a href={P.resume} download="Abdulrahman_Alkhatib_CV.pdf" className="mt-5 inline-flex rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-[#0d2326]">Download CV (PDF)</a>
-    <a href="/Abdulrahman_Alkhatib_CV.docx" download className="ml-3 mt-5 inline-flex rounded-xl border border-line px-5 py-2.5 text-sm font-semibold text-accent hover:bg-chip">Download Word (.docx)</a>
     <H2 divider icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
     <H2 divider icon={Code2}>Technical skills</H2>
     {Object.entries(SKILLS).map(([g, list]) => (
