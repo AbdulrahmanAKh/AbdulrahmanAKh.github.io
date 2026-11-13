@@ -5,7 +5,7 @@ import gradProjectImg from './assets/projects thumbnials/graduation_project.jpg'
 export const PROFILE = {
   name: 'Abdulrahman Alkhatib', initials: 'AA', avatar: profileImg, role: 'Fresh Graduate - CS', status: 'Open to work',
   email: 'aboodkhatib90@gmail.com', phone: '+966 56 750 3648', location: 'Jeddah, Saudi Arabia',
-  links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdulrahman-alkhatib/' }, { label: 'GitHub', href: '#' }],
+  links: [{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/abdulrahman-alkhatib/' }, { label: 'GitHub', href: 'https://github.com/abdulrahmanakh' }],
   resume: '#',
   about: [
     'I’m Abdulrahman Alkhatib, a fresh graduate computer science from Islamic University of Madinah. I enjoy building programming solutions, exploring data, and turning course material into projects I can show.',
