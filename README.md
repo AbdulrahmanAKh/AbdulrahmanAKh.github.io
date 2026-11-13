@@ -3,7 +3,7 @@
 > Personal portfolio showcasing my projects, certifications, and experience in Computer Science & AI.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Portfolio-00C7B7?style=for-the-badge&logo=firefox&logoColor=white)](https://abdulrahmanakh.github.io/)
-[![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://abdulrahmanakh.github.io/Alkhatib-Portfolio/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-181717?style=for-the-badge&logo=github&logoColor=white)](https://abdulrahmanakh.github.io/)
 
 🔗 **Live Link:** [https://abdulrahmanakh.github.io/](https://abdulrahmanakh.github.io/)
 
@@ -22,7 +22,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/abdulrahmanakh/Alkhatib-Portfolio.git
+git clone https://github.com/AbdulrahmanAKh/AbdulrahmanAKh.github.io.git
 
 # Install dependencies
 npm install
@@ -67,3 +67,14 @@ portfolio/
 - **LinkedIn:** [Abdulrahman Alkhatib](https://www.linkedin.com/in/abdulrahman-alkhatib/)
 - **GitHub:** [@abdulrahmanakh](https://github.com/abdulrahmanakh)
 - **Email:** [aboodkhatib90@gmail.com](mailto:aboodkhatib90@gmail.com)
+
+## Portfolio content
+
+- `src/projects.js`: 14 distinct projects covering 16 repositories; private source/showcase pairs are grouped.
+- `src/certificates.js`: 15 selected credentials with certificate previews, originals and available verification links.
+- `public/projects/`: screenshots captured from 10 public live websites and presentations on 13 November 2026. The CRIS project retains its existing project image because no public demo was listed.
+- `public/certificates/`: selected original certificates and rendered previews.
+
+Older KAUST editions and duplicate copies were omitted in favor of the latest completion. The mathematics specialization represents its three component courses. Foundational Python completions, short overlapping workshops and an older data-analysis attendance record were omitted to keep the selection focused. The New Haven digital certificate represents the same award shown in the photographed copy. No degree certificate was supplied, so the placeholder degree credential was removed.
+
+Use Node.js 22 or newer. Run `npm ci` and `npm run build` before publishing. GitHub Actions builds and deploys `dist/` to the root Pages URL.

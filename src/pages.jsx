@@ -11,7 +11,7 @@ const H2 = ({ icon: Icon, children }) => (
     <span className="grid h-10 w-10 place-items-center rounded-[13px] border border-line bg-chip text-accent"><Icon size={20} /></span>{children}
   </h2>
 )
-const Grid = ({ children, className = '' }) => <div className={`grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-[18px] ${className}`}>{children}</div>
+const Grid = ({ children, className = '' }) => <div className={`grid grid-cols-[repeat(auto-fill,minmax(min(100%,250px),1fr))] gap-[18px] ${className}`}>{children}</div>
 const Lead = ({ children, className = '' }) => <p className={`mt-[18px] max-w-[72ch] text-zinc-300 ${className}`}>{children}</p>
 
 function Stat({ value, label }) {
@@ -102,13 +102,15 @@ export function Projects() {
   const shown = PROJECTS.filter((p) => cur === 'All' || p.tags.includes(cur))
   return (<>
     <Title>Projects</Title>
-    <Lead>A selection of things I’ve built for courses and on my own.</Lead>
+    <Lead>Software, AI and data projects from university, personal work and team contributions. Public showcases and private source repositories for the same project are grouped together.</Lead>
+    <p className="mt-3 text-sm text-muted">{PROJECTS.length} projects · {PROJECTS.reduce((n, p) => n + p.repositories.length, 0)} repositories · {PROJECTS.filter((p) => p.demo).length} live websites and presentations</p>
     <div role="group" aria-label="Filter projects by technology" className="mt-6 flex flex-wrap gap-2">
       {tags.map((t) => (
         <button key={t} type="button" aria-pressed={cur === t} onClick={() => setCur(t)}
           className="rounded-xl border border-line bg-chip px-4 py-[5px] text-[13.5px] font-medium aria-pressed:border-accent aria-pressed:bg-accent aria-pressed:text-[#0d2326]">{t}</button>
       ))}
     </div>
+    <p role="status" className="mt-4 text-sm text-muted">Showing {shown.length} of {PROJECTS.length} projects</p>
     <Grid className="mt-5">{shown.map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
   </>)
 }
@@ -116,18 +118,27 @@ export function Projects() {
 export function Certificates() {
   const ref = useRef(null)
   const [sel, setSel] = useState(null)
+  const [category, setCategory] = useState('All')
+  const categories = ['All', ...new Set(CERTS.map((c) => c.category))]
+  const shown = CERTS.filter((c) => category === 'All' || c.category === category)
   useEffect(() => { if (sel) ref.current?.showModal() }, [sel])
   return (<>
     <Title>Certificates</Title>
-    <Lead>Courses and credentials I’ve completed.</Lead>
-    <Grid className="mt-7">{CERTS.map((c) => <CertCard key={c.title} c={c} onView={() => setSel(c)} />)}</Grid>
+    <Lead>Selected training, specializations and achievements supporting my work in software, AI and data science. Each entry includes the certificate and its issuing organization.</Lead>
+    <div role="group" aria-label="Filter certificates by subject" className="mt-6 flex flex-wrap gap-2">
+      {categories.map((c) => <button key={c} type="button" aria-pressed={category === c} onClick={() => setCategory(c)} className="rounded-xl border border-line bg-chip px-4 py-[5px] text-[13.5px] font-medium aria-pressed:border-accent aria-pressed:bg-accent aria-pressed:text-[#0d2326]">{c}</button>)}
+    </div>
+    <p role="status" className="mt-4 text-sm text-muted">Showing {shown.length} of {CERTS.length} selected credentials</p>
+    <Grid className="mt-5">{shown.map((c) => <CertCard key={c.title} c={c} onView={() => setSel(c)} />)}</Grid>
     <dialog ref={ref} onClose={() => setSel(null)} onClick={(e) => e.target === ref.current && ref.current.close()} aria-labelledby="cv-title"
-      className="w-[min(680px,92vw)] rounded-[20px] border border-line bg-card p-6 text-zinc-100 shadow-2xl backdrop:backdrop-blur-md">
+      className="max-h-[90dvh] w-[min(860px,92vw)] overflow-y-auto rounded-[20px] border border-line bg-card p-6 text-zinc-100 shadow-2xl backdrop:backdrop-blur-md">
       {sel && (<>
         <h3 id="cv-title" className="text-xl font-semibold">{sel.title}</h3>
         <p className="mt-1 text-muted">Issued by {sel.issuer}, {sel.date}</p>
-        <Thumb src={sel.img} alt={sel.title} className="my-4 aspect-[4/3]" />
+        <p className="mt-2 text-sm text-muted">{sel.desc}</p>
+        <Thumb src={sel.img} alt={sel.title} contain className="my-4 h-[min(55dvh,600px)]" />
         <div className="flex flex-wrap justify-end gap-3">
+          {sel.verify && <a href={sel.verify} target="_blank" rel="noopener noreferrer" className="rounded-xl border border-line bg-chip px-4 py-2.5 text-[14.5px] font-semibold">Verify credential</a>}
           {sel.url && sel.url !== '#' && (
             <a href={sel.url} target="_blank" rel="noopener noreferrer" className="rounded-xl bg-accent px-4 py-2.5 text-[14.5px] font-semibold text-[#0d2326] transition-transform hover:-translate-y-0.5">
               Open original
