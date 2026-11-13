@@ -23,8 +23,8 @@ export const EDUCATION = [{
 }]
 
 export const EXPERIENCE = [
-  { title: 'API Developer Trainee', org: 'iSolution', when: 'June 2026 — August 2026', desc: 'Developed API proxies and integration workflows in Apigee to support service delivery to external corporate clients.' },
-  { title: 'IT Specialist Trainee', org: 'Mattex', when: 'May 2026 — July 2026', desc: 'Performed regular backups for 160+ devices across six Jeddah buildings and physically audited 260+ devices across six facilities. Migrated 340+ asset records from Excel into the ERP system. Supported network connectivity, server maintenance and end-user troubleshooting.' },
+  { title: 'API Developer Trainee', org: 'iSolution', orgUrl: 'https://www.ismena.com/', when: 'June 2026 — August 2026', desc: 'Developed API proxies and integration workflows in Apigee to support service delivery to external corporate clients.' },
+  { title: 'IT Specialist Trainee', org: 'Mattex Group', orgUrl: 'https://mattex.com/', when: 'May 2026 — July 2026', desc: 'Performed regular backups for 160+ devices across six Jeddah buildings and physically audited 260+ devices across six facilities. Migrated 340+ asset records from Excel into the ERP system. Supported network connectivity, server maintenance and end-user troubleshooting.' },
 ]
 
 export const LEADERSHIP = [{ title: 'Head of Development and Operations Department', org: 'Artificial Intelligence Club · Islamic University of Madinah', when: 'December 2023 — December 2026', desc: 'Led updates to AI training content and teaching methods. Contributed to the development and publication of AI models for university use.' }]

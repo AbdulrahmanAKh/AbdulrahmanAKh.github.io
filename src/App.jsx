@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import { About, Resume, Projects, Certificates, Contact } from './pages'
 
@@ -18,6 +18,9 @@ function useHash() {
 export default function App() {
   const tab = useHash()
   const Page = TABS[tab]
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [tab])
   return (
     <div className="mx-auto grid max-w-[1180px] gap-7 px-3.5 py-5 lg:grid-cols-[300px_1fr] lg:items-start lg:px-5 lg:py-12">
       <Sidebar />
@@ -25,6 +28,7 @@ export default function App() {
         <nav aria-label="Sections" className="sticky top-2 z-10 -mt-3 mb-6 flex gap-[18px] overflow-x-auto rounded-2xl border border-line bg-chip px-[18px] py-3 lg:absolute lg:right-0 lg:top-0 lg:m-0 lg:gap-[26px] lg:rounded-none lg:rounded-bl-[20px] lg:rounded-tr-3xl lg:border-0 lg:px-[26px] lg:py-3.5">
           {Object.keys(TABS).map((t) => (
             <a key={t} href={`#${t}`} aria-current={t === tab ? 'page' : undefined}
+              onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
               className="py-0.5 text-[15px] font-medium capitalize transition-colors hover:text-accent aria-[current=page]:text-accent">{t}</a>
           ))}
         </nav>

@@ -68,7 +68,8 @@ export const CERTS = [
     "desc": "Course completion in supervised regression.",
     "img": "/certificates/supervised-regression.jpg",
     "url": "/certificates/supervised-regression.pdf",
-    "verify": "https://coursera.org/verify/PC5IH3Z4RY7R"
+    "verify": "https://coursera.org/verify/PC5IH3Z4RY7R",
+    "resumeGroup": "course"
   },
   {
     "title": "Exploratory Data Analysis for Machine Learning",
@@ -78,7 +79,8 @@ export const CERTS = [
     "desc": "Course completion in exploratory data analysis.",
     "img": "/certificates/exploratory-data-analysis.jpg",
     "url": "/certificates/exploratory-data-analysis.pdf",
-    "verify": "https://coursera.org/verify/SV5YZSEPXOK2"
+    "verify": "https://coursera.org/verify/SV5YZSEPXOK2",
+    "resumeGroup": "course"
   },
   {
     "title": "Introduction to Data Science in Python",
@@ -108,7 +110,8 @@ export const CERTS = [
     "category": "Cloud & programming",
     "desc": "Training course completion; this is not the AWS Certified Cloud Practitioner exam credential.",
     "img": "/certificates/aws-cloud-essentials.jpg",
-    "url": "/certificates/aws-cloud-essentials.pdf"
+    "url": "/certificates/aws-cloud-essentials.pdf",
+    "resumeGroup": "course"
   },
   {
     "title": "Python Classes and Inheritance",
