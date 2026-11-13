@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { Star, FolderOpen, GraduationCap, Briefcase, Code2, Copy, Check } from 'lucide-react'
-import { PROFILE as P, PROJECTS, CERTS, EDUCATION, EXPERIENCE, SKILLS } from './data'
+import { PROFILE as P, PROJECTS, CERTS, EDUCATION, EXPERIENCE, LEADERSHIP, SKILLS } from './data'
 import { ProjectCard, CertCard, Thumb } from './components/Cards'
 
 const Title = ({ children }) => (
@@ -64,7 +64,7 @@ export function About() {
     <H2 icon={Star}>Highlights</H2>
     <div className="flex flex-wrap gap-x-16 gap-y-10">{P.stats.map(([v, l]) => <Stat key={l} value={v} label={l} />)}</div>
     <H2 icon={FolderOpen}>Featured projects</H2>
-    <Grid>{PROJECTS.slice(0, 2).map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
+    <Grid>{PROJECTS.filter((p) => p.featured).map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
   </>)
 }
 
@@ -86,13 +86,19 @@ function Timeline({ items }) {
 export function Resume() {
   return (<>
     <Title>Resume</Title>
-    <H2 icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
+    <Lead>Experience in API integration, IT operations and applied AI, supported by technical training and hands-on projects.</Lead>
+    <a href={P.resume} download="Abdulrahman_Alkhatib_CV.pdf" className="mt-5 inline-flex rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-[#0d2326]">Download CV (PDF)</a>
     <H2 icon={Briefcase}>Experience</H2><Timeline items={EXPERIENCE} />
+    <H2 icon={Star}>Leadership</H2><Timeline items={LEADERSHIP} />
+    <H2 icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
     <H2 icon={Code2}>Skills</H2>
     {Object.entries(SKILLS).map(([g, list]) => (
       <div key={g} className="mb-4"><small className="mb-2 block text-[13.5px] text-muted">{g}</small>
         <ul className="flex flex-wrap gap-2.5">{list.map((s) => <li key={s} className="list-none rounded-lg bg-chip px-4 py-[5px] text-sm">{s}</li>)}</ul></div>
     ))}
+    <H2 icon={FolderOpen}>Selected projects</H2>
+    <Grid>{PROJECTS.filter((p) => p.featured).map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
+    <a href="#projects" className="mt-5 inline-block text-sm font-medium text-accent hover:underline">Explore all {PROJECTS.length} projects →</a>
   </>)
 }
 

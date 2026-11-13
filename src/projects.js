@@ -6,7 +6,7 @@ const pages = (name) => `https://abdulrahmanakh.github.io/${name}/`
 // Public summaries only. Source/showcase pairs represent one project.
 export const PROJECTS = [
   {
-    title: 'CRIS · Research Information System',
+    title: 'CRIS · Research Information System', featured: true,
     desc: 'My graduation project brings publication records, researcher profiles, journal intelligence, research incentives and institutional analytics into one bilingual platform. I contributed full-stack development, database engineering and scholarly data integration with Scopus and OpenAlex.',
     tags: ['Full stack', 'React', 'TypeScript', 'PostgreSQL', 'Python'],
     code: repo('Graduation-Project-Showcase'), codeLabel: 'Case study',
@@ -14,7 +14,7 @@ export const PROJECTS = [
     repositories: ['Graduation_Project_CRIS', 'Graduation-Project-Showcase'],
   },
   {
-    title: 'Shakkel · Industrial Commerce',
+    title: 'Shakkel · Industrial Commerce', featured: true,
     desc: 'Contributed to a bilingual storefront for industrial and packaging supplies, with product discovery, bulk quotation requests and customer inquiry workflows. The public showcase explains its React and Supabase architecture.',
     tags: ['Full stack', 'React', 'TypeScript', 'PostgreSQL'],
     code: repo('Industrial-Shakkel-Showcase'), codeLabel: 'Case study', demo: 'https://shakkel.store/', demoLabel: 'Live website',
@@ -22,7 +22,7 @@ export const PROJECTS = [
     repositories: ['Industrial-Shakkel-Showcase'],
   },
   {
-    title: 'SiteSight · Construction Safety AI',
+    title: 'SiteSight · Construction Safety AI', featured: true,
     desc: 'A YOLO11 object detector for construction images and video. The browser demo runs an exported ONNX model locally, draws object boxes and flags possible PPE concerns for human review. The notebook reports 46.5% test mAP50 on a small held-out set.',
     tags: ['Computer vision', 'Python', 'YOLO', 'ONNX'],
     code: repo('YOLO_SiteSight_Project'), demo: pages('YOLO_SiteSight_Project'), img: '/projects/sitesight.jpg',
@@ -76,24 +76,6 @@ export const PROJECTS = [
     tags: ['Full stack', 'React', 'TypeScript', 'PostgreSQL'],
     demo: 'https://estifaa-law.vercel.app/', demoLabel: 'Live website', img: '/projects/estifaa.jpg', private: true,
     repositories: ['Estifaa-Project'],
-  },
-  {
-    title: 'Zakat Zen',
-    desc: 'A React application with calculators for money, precious metals, livestock and crops, alongside market-price displays and educational resources. Includes language selection, authentication and calculation reports.',
-    tags: ['Full stack', 'React', 'TypeScript'], private: true,
-    repositories: ['zakat-zen'],
-  },
-  {
-    title: 'Mukafih 1 · Drone Team Project',
-    desc: 'A technical team project for a drone platform. The repository contains a PX4 Autopilot reference and a robotics workspace with a Python fire-trigger component. Source is private and no public demo is listed.',
-    tags: ['Robotics', 'Python'], private: true,
-    repositories: ['mukafih-project'],
-  },
-  {
-    title: 'arXiv Analytics · Hadoop & Spark',
-    desc: 'A university data-engineering notebook that reads arXiv metadata from HDFS, transforms publication records with PySpark and classifies abstracts using TF-IDF and logistic regression. It also explores co-authorship with NetworkX, PageRank and an interactive PyVis graph.',
-    tags: ['Data engineering', 'Python', 'Spark', 'Machine learning'], private: true,
-    repositories: ['Hadoop-project'],
   },
   {
     title: 'Personal Portfolio',

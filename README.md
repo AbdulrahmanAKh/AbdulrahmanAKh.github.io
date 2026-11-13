@@ -70,7 +70,7 @@ portfolio/
 
 ## Portfolio content
 
-- `src/projects.js`: 14 distinct projects covering 16 repositories; private source/showcase pairs are grouped.
+- `src/projects.js`: 11 distinct projects covering 13 repositories; private source/showcase pairs are grouped.
 - `src/certificates.js`: 15 selected credentials with certificate previews, originals and available verification links.
 - `public/projects/`: screenshots captured from 10 public live websites and presentations on 13 November 2026. The CRIS project retains its existing project image because no public demo was listed.
 - `public/certificates/`: selected original certificates and rendered previews.
@@ -78,3 +78,5 @@ portfolio/
 Older KAUST editions and duplicate copies were omitted in favor of the latest completion. The mathematics specialization represents its three component courses. Foundational Python completions, short overlapping workshops and an older data-analysis attendance record were omitted to keep the selection focused. The New Haven digital certificate represents the same award shown in the photographed copy. No degree certificate was supplied, so the placeholder degree credential was removed.
 
 Use Node.js 22 or newer. Run `npm ci` and `npm run build` before publishing. GitHub Actions builds and deploys `dist/` to the root Pages URL.
+
+The About page features CRIS, Shakkel Commerce and SiteSight. The Resume page and downloadable CV contain the current confirmed education, experience, leadership and skills. The CV includes all 11 retained projects with portfolio and GitHub links. Zakat Zen, Mukafih and arXiv Hadoop were removed from the portfolio at the owner's request.

@@ -120,6 +120,7 @@ export default function Sidebar() {
       <div className="relative mt-4 flex flex-col gap-2">
         <a
           href={P.resume}
+          download={P.resume && P.resume !== '#' ? 'Abdulrahman_Alkhatib_CV.pdf' : undefined}
           onClick={handleResumeClick}
           className="rounded-xl bg-accent px-4 py-2 text-[14px] font-semibold text-[#0d2326] transition-transform hover:-translate-y-0.5"
         >
