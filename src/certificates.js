@@ -35,7 +35,7 @@ export const CERTS = [
     "issuer": "University of New Haven",
     "date": "May 2025",
     "category": "AI & machine learning",
-    "desc": "Certificate of achievement in practical AI and machine learning.",
+    "desc": "Completed 100+ hours of hands-on learning in practical AI and machine learning.",
     "img": "/certificates/new-haven-ai.jpg",
     "url": "/certificates/new-haven-ai.png",
     "resumeGroup": "program"

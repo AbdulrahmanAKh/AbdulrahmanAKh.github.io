@@ -6,8 +6,8 @@ import { ProjectCard, CertCard, Thumb } from './components/Cards'
 const Title = ({ children }) => (
   <h1 className="mb-1 max-w-full text-[34px] font-semibold leading-tight after:mt-3 after:block after:h-1 after:w-11 after:rounded after:bg-accent after:content-[''] lg:max-w-[60%]">{children}</h1>
 )
-const H2 = ({ icon: Icon, children }) => (
-  <h2 className="mb-[18px] mt-11 flex items-center gap-3 text-[23px] font-semibold">
+const H2 = ({ icon: Icon, children, divider = false }) => (
+  <h2 className={`mb-[18px] mt-11 flex items-center gap-3 text-[23px] font-semibold ${divider ? "border-b border-line pb-3" : ""}`}>
     <span className="grid h-10 w-10 place-items-center rounded-[13px] border border-line bg-chip text-accent"><Icon size={20} /></span>{children}
   </h2>
 )
@@ -73,9 +73,11 @@ function Timeline({ items }) {
     <div className="ml-3 border-l-2 border-line/80 pl-6">
       {items.map((e) => (
         <div key={e.title} className="relative mb-[30px] before:absolute before:-left-[31px] before:top-[7px] before:h-3 before:w-3 before:rounded-full before:bg-accent before:ring-4 before:ring-[#163035] before:content-['']">
-          <h3 className="text-[17px] font-semibold">{e.title}</h3>
-          <em className="block text-[15px] not-italic text-muted">{e.org}</em>
-          <time className="mt-1.5 block text-[14px] font-medium text-accent">{e.when}</time>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-5">
+            <h3 className="text-[17px] font-semibold">{e.title}</h3>
+            <time className="shrink-0 text-[14px] font-medium text-accent sm:text-right">{e.when}</time>
+          </div>
+          <em className="mt-1 block text-[15px] not-italic text-muted">{e.org}</em>
           <p className="mt-1 text-[15px] text-zinc-300">{e.desc}</p>
         </div>
       ))}
@@ -84,28 +86,27 @@ function Timeline({ items }) {
 }
 
 export function Resume() {
-  const credentialItems = (group) => CERTS.filter((c) => c.resumeGroup === group).map((c) => ({ title: c.title, org: c.issuer, when: c.date, desc: c.desc }))
+  const credentialItems = CERTS.filter((c) => c.resumeGroup).map((c) => ({ title: c.title, org: c.issuer, when: c.date, desc: c.desc }))
   return (<>
     <Title>Resume</Title>
     <Lead>Software development, API integration and applied AI, supported by university study and practical project work.</Lead>
     <a href={P.resume} download="Abdulrahman_Alkhatib_CV.pdf" className="mt-5 inline-flex rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-[#0d2326]">Download CV (PDF)</a>
-    <H2 icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
-    <H2 icon={Code2}>Technical skills</H2>
+    <H2 divider icon={GraduationCap}>Education</H2><Timeline items={EDUCATION} />
+    <H2 divider icon={Code2}>Technical skills</H2>
     {Object.entries(SKILLS).map(([g, list]) => (
       <div key={g} className="mb-4"><small className="mb-2 block text-[13.5px] text-muted">{g}</small>
         <ul className="flex flex-wrap gap-2.5">{list.map((s) => <li key={s} className="list-none rounded-lg bg-chip px-4 py-[5px] text-sm">{s}</li>)}</ul></div>
     ))}
-    <H2 icon={Briefcase}>Professional experience</H2><Timeline items={EXPERIENCE} />
-    <H2 icon={Star}>Leadership &amp; activities</H2><Timeline items={LEADERSHIP} />
-    <H2 icon={FolderOpen}>Projects</H2>
+    <H2 divider icon={Briefcase}>Professional experience</H2><Timeline items={EXPERIENCE} />
+    <H2 divider icon={Star}>Leadership &amp; activities</H2><Timeline items={LEADERSHIP} />
+    <H2 divider icon={FolderOpen}>Projects</H2>
     <Grid>{PROJECTS.filter((p) => p.featured).map((p) => <ProjectCard key={p.title} p={p} />)}</Grid>
     <a href="#projects" className="mt-5 inline-block text-sm font-medium text-accent hover:underline">Explore all {PROJECTS.length} projects →</a>
-    <H2 icon={GraduationCap}>Certificates &amp; completed programs</H2>
-    <p className="mb-5 text-sm text-muted">Completion certificates earned through structured learning programs.</p>
-    <Timeline items={credentialItems('program')} />
-    <H2 icon={GraduationCap}>Online courses</H2><Timeline items={credentialItems('course')} />
+    <H2 divider icon={GraduationCap}>Certifications &amp; programs</H2>
+    <p className="mb-5 text-sm text-muted">Selected program certificates, specializations and online course completions.</p>
+    <Timeline items={credentialItems} />
     <a href="#certificates" className="inline-block text-sm font-medium text-accent hover:underline">View all certificates and course completions →</a>
-    <H2 icon={Code2}>Languages</H2>
+    <H2 divider icon={Code2}>Languages</H2>
     <p className="text-zinc-300">Arabic: Native · English: Professional working proficiency</p>
   </>)
 }
