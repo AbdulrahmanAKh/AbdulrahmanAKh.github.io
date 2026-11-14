@@ -1,4 +1,4 @@
-import graduationImage from './projects/graduation_project.webp'
+// import graduationImage from './assets/projects thumbnials/graduation_project.webp'
 
 const repo = (name) => `https://github.com/AbdulrahmanAKh/${name}`
 const pages = (name) => `https://abdulrahmanakh.github.io/${name}/`
@@ -11,8 +11,8 @@ export const PROJECTS = [
     category: 'Web Applications',
     tags: ['Full stack', 'React', 'TypeScript', 'PostgreSQL', 'Python'],
     code: repo('Graduation-Project-Showcase'), codeLabel: 'Case study',
-    img: graduationImage, imageNote: 'Project image', m: 'Graduation project',
-    repositories: ['Graduation_Project_CRIS', 'Graduation-Project-Showcase'],
+    img: '/projects/graduation_project.webp', imageNote: 'Project image', m: 'Graduation project',
+    repositories: ['Graduation-Project-Showcase'],
   },
   {
     title: 'Shakkel · Industrial Commerce', featured: true,
