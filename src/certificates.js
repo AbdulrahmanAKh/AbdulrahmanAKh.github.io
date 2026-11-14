@@ -5,7 +5,7 @@ export const CERTS = [
     "date": "February 2026",
     "category": "AI & machine learning",
     "desc": "40 hours covering augmentation, transfer learning, segmentation and object detection.",
-    "img": "/certificates/kaust-advanced-ai.jpg",
+    "img": "/certificates/kaust-advanced-ai.webp",
     "url": "/certificates/kaust-advanced-ai.pdf",
     "m": "Program certificate · 40 hours",
     "resumeGroup": "program"
@@ -16,7 +16,7 @@ export const CERTS = [
     "date": "January 2026",
     "category": "AI & machine learning",
     "desc": "40 hours covering machine learning foundations, deep learning and unsupervised learning.",
-    "img": "/certificates/kaust-intro-ai.jpg",
+    "img": "/certificates/kaust-intro-ai.webp",
     "url": "/certificates/kaust-intro-ai.pdf",
     "resumeGroup": "program"
   },
@@ -26,7 +26,7 @@ export const CERTS = [
     "date": "December 2025",
     "category": "Professional development",
     "desc": "Completion certificate for a structured learning program in leadership, problem solving, communication and adaptability.",
-    "img": "/certificates/mckinsey-forward.jpg",
+    "img": "/certificates/mckinsey-forward.webp",
     "url": "/certificates/mckinsey-forward.pdf",
     "resumeGroup": "program"
   },
@@ -36,7 +36,7 @@ export const CERTS = [
     "date": "May 2025",
     "category": "AI & machine learning",
     "desc": "Completed 100+ hours of hands-on learning in practical AI and machine learning.",
-    "img": "/certificates/new-haven-ai.jpg",
+    "img": "/certificates/new-haven-ai.webp",
     "url": "/certificates/new-haven-ai.png",
     "resumeGroup": "program"
   },
@@ -46,7 +46,7 @@ export const CERTS = [
     "date": "April 2026",
     "category": "Data science",
     "desc": "Completion course · 1 hour 15 minutes.",
-    "img": "/certificates/ibm-generative-ai.jpg",
+    "img": "/certificates/ibm-generative-ai.webp",
     "url": "/certificates/ibm-generative-ai.pdf"
   },
   {
@@ -55,7 +55,7 @@ export const CERTS = [
     "date": "December 2024",
     "category": "AI & machine learning",
     "desc": "Course completion in neural network tuning and optimization.",
-    "img": "/certificates/deep-neural-networks.jpg",
+    "img": "/certificates/deep-neural-networks.webp",
     "url": "/certificates/deep-neural-networks.pdf",
     "verify": "https://coursera.org/verify/Y5A8ASIEVRHG",
     "resumeGroup": "course"
@@ -66,7 +66,7 @@ export const CERTS = [
     "date": "December 2024",
     "category": "AI & machine learning",
     "desc": "Course completion in supervised regression.",
-    "img": "/certificates/supervised-regression.jpg",
+    "img": "/certificates/supervised-regression.webp",
     "url": "/certificates/supervised-regression.pdf",
     "verify": "https://coursera.org/verify/PC5IH3Z4RY7R",
     "resumeGroup": "course"
@@ -77,7 +77,7 @@ export const CERTS = [
     "date": "December 2024",
     "category": "Data science",
     "desc": "Course completion in exploratory data analysis.",
-    "img": "/certificates/exploratory-data-analysis.jpg",
+    "img": "/certificates/exploratory-data-analysis.webp",
     "url": "/certificates/exploratory-data-analysis.pdf",
     "verify": "https://coursera.org/verify/SV5YZSEPXOK2",
     "resumeGroup": "course"
@@ -88,7 +88,7 @@ export const CERTS = [
     "date": "December 2024",
     "category": "Data science",
     "desc": "Course completion in Python for data science.",
-    "img": "/certificates/data-science-python.jpg",
+    "img": "/certificates/data-science-python.webp",
     "url": "/certificates/data-science-python.pdf",
     "verify": "https://coursera.org/verify/L9U1OBW5ZCCY"
   },
@@ -98,7 +98,7 @@ export const CERTS = [
     "date": "November 2023",
     "category": "AI & machine learning",
     "desc": "Three-course specialization: linear algebra, calculus, probability and statistics.",
-    "img": "/certificates/mathematics-ml.jpg",
+    "img": "/certificates/mathematics-ml.webp",
     "url": "/certificates/mathematics-ml.pdf",
     "verify": "https://coursera.org/verify/specialization/EMEJHEQVPWG3",
     "resumeGroup": "course"
@@ -109,7 +109,7 @@ export const CERTS = [
     "date": "January 2024",
     "category": "Cloud & programming",
     "desc": "Training course completion; this is not the AWS Certified Cloud Practitioner exam credential.",
-    "img": "/certificates/aws-cloud-essentials.jpg",
+    "img": "/certificates/aws-cloud-essentials.webp",
     "url": "/certificates/aws-cloud-essentials.pdf",
     "resumeGroup": "course"
   },
@@ -119,7 +119,7 @@ export const CERTS = [
     "date": "October 2023",
     "category": "Cloud & programming",
     "desc": "Course completion in object-oriented Python.",
-    "img": "/certificates/python-classes.jpg",
+    "img": "/certificates/python-classes.webp",
     "url": "/certificates/python-classes.pdf",
     "verify": "https://coursera.org/verify/K5LE4FJX3RW7"
   },
@@ -129,7 +129,7 @@ export const CERTS = [
     "date": "October 2023",
     "category": "Cloud & programming",
     "desc": "Course completion in Python data collection and processing.",
-    "img": "/certificates/python-data-collection.jpg",
+    "img": "/certificates/python-data-collection.webp",
     "url": "/certificates/python-data-collection.pdf",
     "verify": "https://coursera.org/verify/WMYU9J76JPEV"
   },
@@ -139,7 +139,7 @@ export const CERTS = [
     "date": "March 2024",
     "category": "Cloud & programming",
     "desc": "Certificate of participation in the national programming competition.",
-    "img": "/certificates/programming-jam.jpg",
+    "img": "/certificates/programming-jam.webp",
     "url": "/certificates/programming-jam.pdf"
   },
   {
@@ -148,7 +148,7 @@ export const CERTS = [
     "date": "November 2023",
     "category": "AI & machine learning",
     "desc": "10-hour bootcamp covering linear algebra, regression, calculus, statistics and neural networks.",
-    "img": "/certificates/drag-ai-bootcamp.jpg",
+    "img": "/certificates/drag-ai-bootcamp.webp",
     "url": "/certificates/drag-ai-bootcamp.pdf"
   }
 ]
